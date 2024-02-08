@@ -4,14 +4,6 @@ Created on Mon Nov 27 12:05:55 2017
 
 @author: clahn
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 21 15:36:00 2016
-
-@author: Deepesh.Singh
-"""
-
 import win32com.client as win32
 import psutil
 import os
@@ -23,9 +15,9 @@ import subprocess
 def send_notification():
     outlook = win32.Dispatch('outlook.application')
     mail = outlook.CreateItem(0)
-    mail.To = 'christopher.lahn@sanfordhealth.org; Ryan.Bosca@SanfordHealth.org; Brent.Colby@sanfordhealth.org; Danielle.M.Goetz@SanfordHealth.org; William.Duppler@SanfordHealth.org; Kyle.McCallum@sanfordhealth.org; Lanny.Molstad@sanfordhealth.org; Steve.Cassola@sanfordhealth.org'
-    mail.Subject = 'API Monday. Please review and sign off on your time cards.  Thanks!'
-    mail.body = 'Please review and sign off on your time cards.  Thanks!  This email alert is auto generated. Please do not respond.'
+    mail.To = ''
+    mail.Subject = ''
+    mail.body = 'This email alert is auto generated. Please do not respond.'
     mail.send
 
 # Open Outlook.exe. Path may vary according to system config
